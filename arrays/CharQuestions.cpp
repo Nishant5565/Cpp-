@@ -52,8 +52,6 @@ void replaceSpaces( char sentence[]){
 }
 
 
-
-
 int main(){
 
 // ! Answer 1

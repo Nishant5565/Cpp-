@@ -5,7 +5,11 @@ int main(){
     cin>>n; //No of rows.
     int a =5;
 
+    // Note - comment in the codes to run the program.
+
     //? For normal triangle pattern
+
+    // * Explaination - The outer loop iterates from 0 to n-1, where n is the number of rows in the pattern. The inner loop iterates from 0 to i, where i is the current row number. In each iteration of the inner loop, an asterisk is printed to the console. After the inner loop completes, a newline character is printed to move to the next row. This pattern creates a right-angled triangle of asterisks, where the number of asterisks in each row increases by 1.
 
     /*for(int i = 0;i<n;i++){
         for(int j=0; j<i+1;j++){
