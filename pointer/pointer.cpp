@@ -34,7 +34,7 @@ int main(){
      // ! So here comes the question, pointer also gives the adrress and arrays are also giving the adrress then what's the difference between those two? First of all let's have some questions on arrays and pointer. 
 
 
-     // Todo- uncomment and run the code after figuring out the answers on your own, then after read next instructions.
+     // note- uncomment and run the code after figuring out the answers on your own, then after read next instructions.
      auto* arrp = &myarr;
 
     /* 
@@ -77,4 +77,6 @@ int main(){
           //  cout<< *(arr+i);
      }
 
+     // ? Characater arrays and their special method.
+     char ch[10] = "Nishant";
 }

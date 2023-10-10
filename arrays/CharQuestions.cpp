@@ -3,8 +3,6 @@
 using namespace std;
 
 
-
-
  // ! Question - find the length of your char array.
 // ? To find the length of our char array we simply use linear search and search for our null character because it represents the end of the array. ( Note- Obviously the array's size is 100 in our case, but we are finding how many characters are present in our array.).
 
@@ -52,35 +50,98 @@ void replaceSpaces( char sentence[]){
 }
 
 
+// ! Question - To find whether the character array is a pallindrome or not.
+// ? Logic - A pallindrome string is a string which is exactly same if we reverse the characters, for example "racecar" whose reverse will alse be "racecar".
+
+bool checkPallindrome( char word[]){
+     int i = 0;
+     int n = charLength(word);
+     int j =n-1;
+     while(i<=j){
+
+     //* Explaination- Here rather than swapiong we are comparing the first and last character with the same concept we did in our char array reversel question.
+
+          if(word[i] == word[j]){
+               j--;
+               i++;
+          }
+          else{
+               return false;
+          }
+     }
+     return true;
+}
+
+// ! Question - Convert a lowercase character into uppercase.
+// ? Logic - We are doing this by changing the ASCII values.
+//* Explaination - We are converting the characters one by one using for loop, here we are replacing the character stored at index i with the uppercase by using ASCII values, the ASCII value of a-z are '97-122' and for A it is '65-90' so if we subtract the 97 from myarr[i] ( let's suppose it is b ( ASCII value will be 98 )) then we get 1, and if we add it in 'A' (67) then we get 68, which the ASCII value of 'B'.
+
+int intoUpperCase(char myarr[]){
+     int n = charLength(myarr);
+     for(int i =0; i<n; i++){
+
+          if ( myarr[i]>= 'a' && myarr[i]<='z' ){  //? we are confiriming that the character should be in lower case, other wise if the user inputs a char which is in uppercase then the formula will mess up.
+               myarr[i] = myarr[i] - 'a'+'A';
+          }
+     }
+
+
+}
+
+
+
 int main(){
 
 // ! Answer 1
 
-     char arr[100];
-     cin >> arr;
+// * Uncomment the codes one by one to run the specific program.
 
-     int charLen= charLength(arr); 
-     cout<< "You have input " << charLen << " characters" << endl;
+     // char arr[100];
+     // cin >> arr;
 
-     // Note - there is also a predifined function which gives the length of char array -> strlen(), make sure that you have included the string.h file.
+     // int charLen= charLength(arr); 
+     // cout<< "You have input " << charLen << " characters" << endl;
 
-     cout<< "Number of characters by pre defined function "<< strlen(arr)<<endl;  
+     // // Note - there is also a predifined function which gives the length of char array -> strlen(), make sure that you have included the string.h file.
+
+     // cout<< "Number of characters by pre defined function "<< strlen(arr)<<endl;  
 
 
 // ! Answer 2
 
 
-     cout<< "Initially our array is "<< arr << endl;
-     reverseChar(arr);   //! Since array is pass by reference so the changes will be sustain in the main function as well.
-     cout<< "After reversal our array is "<< arr<< endl;
+     // cout<< "Initially our array is "<< arr << endl;
+     // reverseChar(arr);   //! Since array is pass by reference so the changes will be sustain in the main function as well.
+     // cout<< "After reversal our array is "<< arr<< endl;
 
 // ! Answer 3
 
 
-     char myarr[100];
-     cin.getline(myarr, 30);
+     // char myarr[100];
+     // cin.getline(myarr, 30);
 
-     replaceSpaces(myarr);
+     // replaceSpaces(myarr);
 
-     cout<< "Replacing the characters " << arr << endl;     
+     // cout<< "Replacing the characters " << arr << endl;   
+
+// ! Answer 4
+
+     // char word[100];
+     // cin>> word;
+     // if(checkPallindrome(word)){
+     //      cout<<"This string is pallindrome" <<endl;
+     // }
+     // else{
+     //      cout<< "This string is not pallindrome"<<endl;
+
+     // }
+
+// ! Answer 5
+
+     char myarr2[100];
+     cin>>myarr2;
+     intoUpperCase(myarr2);
+     cout<<myarr2;
+
+
 }
