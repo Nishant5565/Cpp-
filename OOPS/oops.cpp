@@ -52,8 +52,13 @@ class Game{
           id = param;
      }
 
+     // ! Destructors - we use destructor for memory deallocation.
+     // ? Note - Destructors are also present by default just like constructors, but we can add our own destructor, but if we make our object statically then the user defined destructor will not call, the user defined destructor will only called when the object is made dynamically.
 
-     
+     // * The syntax of destructor is just like constructor the only difference is we add a tilde sign(~) for differentiation.
+     ~Game(){
+          cout<< "Destructor is called ";
+     }
 
 };
 

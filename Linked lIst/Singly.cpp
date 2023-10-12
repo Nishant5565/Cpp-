@@ -14,6 +14,7 @@ class Node{
      
 };
 
+
 // ? Insert at head means we are inserting our new node at head(in the starting).
 // * Logic - So first of all we passed two parameters while calling the function then we recieve the parameters as arguements. After then we created a new node with name temp, now the Node have some data and is pointing NULL as the address but now we have to configure the adrress so that it points the head that is created previously. To be more specific we need to attach this list to the head that we have created in the starting. 
 
@@ -46,7 +47,7 @@ void insertAtPosition(Node* &tail ,Node* &head,int position, int data){
 
      // ? Inserting at last position
 
-     if(temp->next = NULL){
+     if(temp->next == NULL){
           insertAttail(tail,data);
           return;
      }
