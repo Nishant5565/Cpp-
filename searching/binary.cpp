@@ -51,8 +51,7 @@ int binarySearch(int arr[], int size , int target){
 int main(){
      int arr[]= {1,2,3,4,7,8,9,12,14,21,344,345,564};
      int size = 13;
-     int target = 564;
-
+     int target = 1;
      // ? Here we store the value in searchResult variable that we got from the function binarySearch.
 
      int searchResult = binarySearch( arr, size, target);
