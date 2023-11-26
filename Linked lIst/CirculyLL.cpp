@@ -33,5 +33,5 @@ void insertNode(Node* &tail, int data){
 
 
  int main(){
-     insertNode()
+     // insertNode();
  }
