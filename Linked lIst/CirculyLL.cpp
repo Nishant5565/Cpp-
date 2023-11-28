@@ -25,13 +25,51 @@ class Node{
      }
 };
 
-void insertNode(Node* &tail, int data){
+//* Case 1 - no node is present, then create a node which is pointing to itself.
+//* Case 2 - if a node is already present than it means already it have a tail and it is pointing to the head, so we need to store the pointer's value.
+
+
+
+// * Function insert after that particular position
+void insertNode(Node* &tail, int element,int data){
      if(tail == NULL){
+          Node* temp = new Node(data);
+          temp->next = temp;
+          tail = temp;
+          cout<< " adress of temp is " << temp->next <<endl;
+     }
+     else {
+
+          Node * curr = tail;
+          while ( curr->data != element ){
+               curr = curr->next;
+          }
+
+          Node* temp = new Node(data);
+          temp->next = curr->next;
+          curr->next = temp;
 
      }
 }
 
 
+// * Traversing a linked list 
+
+void print(Node* tail){
+
+     Node * curr = tail;
+     do
+     {
+          cout << curr->data<< " ";
+          curr = curr->next;
+     } while (curr != tail);
+}
+
  int main(){
-     // insertNode();
+     Node * tail = NULL;
+     insertNode( tail ,10, 20 );
+     insertNode( tail ,20, 50 );
+     insertNode( tail ,20, 60 );
+     insertNode( tail ,20, 30 );
+     print(tail);
  }
