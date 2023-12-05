@@ -1,4 +1,14 @@
 // ! Menu Driven Program for Circular Queue using arrays.
+
+// Note - why we need circular queue and what is the differnece between these two - 
+
+// *  Normal Queue:
+// ? In a normal queue, once the elements are removed, the space cannot be reused. If the last position is reached, no more data can be inserted, even if there is space at the beginning of the queue. This issue is known as "Queue Overflow". To overcome this, we need to shift elements every time a dequeue operation is performed, which is not efficient.
+
+
+// * Circular Queue:
+//?  In a circular queue, the last element points back to the first element making a circular link. So, when we perform an enqueue operation at the end of a queue and the front of the queue is empty, we can insert an element in the front of the queue. This action is beneficial in memory utilization as it overcomes the problem of queue overflow in normal queue.
+
 #include <iostream>
 using namespace std;
 
@@ -103,11 +113,3 @@ int main() {
      return 0;
 }
 
-// Note - why we need circular queue and what is the differnece between these two - 
-
-// *  Normal Queue:
-// ? In a normal queue, once the elements are removed, the space cannot be reused. If the last position is reached, no more data can be inserted, even if there is space at the beginning of the queue. This issue is known as "Queue Overflow". To overcome this, we need to shift elements every time a dequeue operation is performed, which is not efficient.
-
-
-// * Circular Queue:
-//?  In a circular queue, the last element points back to the first element making a circular link. So, when we perform an enqueue operation at the end of a queue and the front of the queue is empty, we can insert an element in the front of the queue. This action is beneficial in memory utilization as it overcomes the problem of queue overflow in normal queue.

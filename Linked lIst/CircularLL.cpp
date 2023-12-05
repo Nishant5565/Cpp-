@@ -11,8 +11,6 @@ struct Node {
     Node* next;
 };
 
-
-
 class CircularLinkedList {
 private:
     Node* head;
@@ -27,8 +25,6 @@ public:
      // ? CircularLinkedList(): This is the constructor declaration. It's a special member function that gets called when an object of the class is created. In this case, the constructor takes no parameters, indicating that it's a default constructor. The body of the constructor is empty, meaning it does nothing.
      // * Here head is initialized to nullptr. This is a null pointer, which is a pointer that does not point to any memory location. It's a good practice to initialize pointers to nullptr if they don't point to anything.
   
-
-
 
     void insert(int value);
     void display();
@@ -80,13 +76,11 @@ void CircularLinkedList::deleteNode(int value) {
     Node* current = head;
     Node* previous = nullptr;
 
-    // Find the node to be deleted and the previous node
     while (current->next != head && current->data != value) {
         previous = current;
         current = current->next;
     }
 
-    // If the node is found, delete it
     if (current->data == value) {
         if (current == head) {
             Node* lastNode = head;
