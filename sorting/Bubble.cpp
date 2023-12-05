@@ -15,9 +15,22 @@ int bubbleSort(int arr[] , int n){
      }
 }
 int main(){
-     int arr[6] = {10,1,7,6,14,9};
+     int n;
+     cout << "Enter the size of the array\n";
+     cin>>n;
+     int arr[n];
+     cout<< "Enter the elements of the Array\n";
+     for ( int i = 0;i<n ;i++){
+          cin>>arr[i];          
+     }
+     cout << "Original Array is: ";
      int size = sizeof(arr)/sizeof(arr[0]);
+          for(int i = 0 ;i<size;i++){
+          cout<<arr[i]<<" ";
+     }
+     
      bubbleSort(arr, size);
+     cout<<"\nSorted array is :";
      for(int i = 0 ;i<size;i++){
           cout<<arr[i]<<" ";
      }

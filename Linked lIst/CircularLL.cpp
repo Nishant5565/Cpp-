@@ -1,3 +1,5 @@
+// ! Menu Driven Program to implement Circular Linked List
+
 #include <iostream>
 using namespace std;
 
@@ -61,7 +63,7 @@ void CircularLinkedList::display() {
 
     Node* temp = head;
     do {
-        cout << temp->data << " ";
+        cout << temp->data << " -> ";
         temp = temp->next;
     } while (temp != head);
     cout <<   endl;
@@ -111,21 +113,41 @@ void CircularLinkedList::deleteNode(int value) {
      cout << "List after deletion: ";
     display();
 }
-
 int main() {
     CircularLinkedList myList;
+    int choice, value;
 
-    // Inserting elements
-    myList.insert(1);
-    myList.insert(2);
-    myList.insert(3);
+    do {
+        cout << "\n*********Menu*********\n";
+        cout << "1. Insert\n";
+        cout << "2. Delete\n";
+        cout << "3. Display\n";
+        cout << "4. Exit\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
 
-    // Displaying elements
-      cout << "Original List: ";
-    myList.display();
-
-    myList.deleteNode(2);
-
+        switch (choice) {
+            case 1:
+                cout << "Enter the value to be inserted: ";
+                cin >> value;
+                myList.insert(value);
+                break;
+            case 2:
+                cout << "Enter the value to be deleted: ";
+                cin >> value;
+                myList.deleteNode(value);
+                break;
+            case 3:
+                cout << "List: ";
+                myList.display();
+                break;
+            case 4:
+                cout << "Exiting...\n";
+                break;
+            default:
+                cout << "Invalid choice. Please enter a valid option.\n";
+        }
+    } while (choice != 4);
 
     return 0;
 }

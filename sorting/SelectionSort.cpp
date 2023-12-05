@@ -29,15 +29,22 @@ void selectionSort(int arr[], int n) {
 }
 
 int main() {
-    int arr[] = {64, 25, 12, 22, 11};
-    int n = sizeof(arr) / sizeof(arr[0]);
+     int n;
+     cout << "Enter the size of the array\n";
+     cin>>n;
+     int arr[n];
+     cout<< "Enter the elements of the Array\n";
+     for ( int i = 0;i<n ;i++){
+          cin>>arr[i];          
+     }
+    int x = sizeof(arr) / sizeof(arr[0]);
 
     cout << "Original array: ";
     for (int i = 0; i < n; ++i) {
         cout << arr[i] << " ";
     }
 
-    selectionSort(arr, n);
+    selectionSort(arr, x);
 
     cout << "\nSorted array: ";
     for (int i = 0; i < n; ++i) {
