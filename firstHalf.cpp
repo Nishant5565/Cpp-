@@ -16,13 +16,12 @@ public:
     LinkedList() : head(nullptr) {}   
 
      void insertNode(int value);
-
-
+     
 };
 
 
 void LinkedList::insertNode(int data){
-     
+
 }
 
 int main(){

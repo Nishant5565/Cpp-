@@ -19,9 +19,10 @@ int binarySearch(int arr[], int size , int target){
 
      // ! Note - everytime the loop runs, the array size becomes half.
           //? Here we store the arr[mid] value into an element named midElement for convinience (Note - this value updates every time till our midElement == target).
-
+          cout << "start index is " << start << endl;
+          cout << "end index is " << end << endl;
+          cout<<"mid index is " << mid << endl;
           int midElement = arr[mid];  
-          
           if (midElement == target)  
           {
 
@@ -49,9 +50,9 @@ int binarySearch(int arr[], int size , int target){
 }
 
 int main(){
-     int arr[]= {1,2,3,4,7,8,9,12,14,21,344,345,564};
-     int size = 13;
-     int target = 1;
+     int arr[]= {10,20,34,46,47, 51,58, 61 , 68, 73 , 76 , 100};
+     int size = 12;
+     int target = 61;
      // ? Here we store the value in searchResult variable that we got from the function binarySearch.
 
      int searchResult = binarySearch( arr, size, target);
