@@ -1,6 +1,9 @@
 #include <iostream>
 using namespace std;
 
+// ! Normal Arrays
+// * Normal arrays are static arrays that are created at compile time. They have a fixed size and cannot be resized during runtime. The size of the array must be known at compile time. Arrays are used to store multiple elements of the same data type. The elements of the array are stored in contiguous memory locations. The elements of the array can be accessed using an index. The index of the first element of the array is 0. The index of the last element of the array is n-1, where n is the size of the array.
+
 int top = -1;
 
 void push(int x , int arr[], int n) {

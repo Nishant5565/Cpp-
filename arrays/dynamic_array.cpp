@@ -9,5 +9,4 @@ int main(){
           arr.push_back(i);
      }
      cout<<arr.size();
-     // cout << arr;
 }
